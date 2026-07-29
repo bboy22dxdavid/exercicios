@@ -18,7 +18,7 @@ public class CategoriaNadador {
         String categoria;
 
         //estrutura condicional
-        if(idade <= 5 && idade ==7){
+        /*if(idade <= 5 && idade ==7){
             categoria = "infantil A";
         } else if (idade >= 8 && idade <=10) {
             categoria = "infantil B";
@@ -28,7 +28,11 @@ public class CategoriaNadador {
             categoria = "Juvenil B";
         } else {
             categoria = "Adulto ";
-        }
+        }*/
+
+        //utilizando estrutura de operador ternario
+        categoria =  idade <= 5 && idade ==7 ? "infantil A" : idade >= 8 && idade <=10 ? "infantil B" :
+                idade >= 11 && idade <=13 ? "Juvenil A" : idade >= 14 && idade <=17 ? "Juvenil B" : "Adulto ";
 
         System.out.println("Sua idade e: " + idade + " Anos" + " e sua Categoria e: " + categoria);
     }

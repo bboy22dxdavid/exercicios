@@ -1,16 +1,37 @@
 package exercicio;
+import java.util.Scanner;
 
 public class ExVariavelPrimitiva {
     static void main() {
-        String nome = "David";
-        String endereco = "Rua Botocudos, Qd 30, cha 8, casa 45";
-        double salario = 3000.00;
-        String dataSalario = "01/08/2026";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite seu Nome: ");
+        String nome = scanner.nextLine();
+
+        System.out.println("Digite seu endereço: ");
+        String endereco = scanner.nextLine();
+
+        System.out.println("Digite a data do seu salario: ");
+        String dataSalario = scanner.nextLine();
+
+        System.out.println("Digite seu salario: ");
+        double salario = scanner.nextDouble();
 
 
-        String result = ("EU "+ nome+", morando no endereço:" + endereco + "," +
-                "confirmo que recebi o salario de R$: "+salario+", na data: "+dataSalario);
+        if(nome != null && nome.isEmpty()){
+            System.out.println("O nome está vazio.");
+        } else if (endereco != null && endereco.isEmpty()){
+            System.out.println("O endereco está vazio.");
+        } else if (dataSalario != null && endereco.isEmpty()) {
+            System.out.println("O dataSalario está vazio.");
+        } else if (salario <= 0 ) {
+            System.out.println("O salario não pode ser menor que 0.");
+        }else{
+            String result = ("EU "+ nome+", morando no endereço:" + endereco + "," +
+                    "confirmo que recebi o salario de R$: "+salario+", na data: "+dataSalario);
 
-        System.out.println(result);
+            System.out.println(result);
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-package exercicio;
+package exercicio.Sintaxe;
 import java.util.Scanner;
 
 

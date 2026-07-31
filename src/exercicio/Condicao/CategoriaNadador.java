@@ -1,4 +1,4 @@
-package exercicio;
+package exercicio.Condicao;
 import java.util.Scanner;
 
 /*Elabore um algoritmo e o respectivo programa que dada a idade de um nadador

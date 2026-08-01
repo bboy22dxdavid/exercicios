@@ -11,7 +11,7 @@ public class ExWhileForDecrecente {
         System.out.print("Digite uma numero: ");
         int numero = scanner.nextInt();
 
-        while (numero >= 10) {
+        while (numero >= 30) {
             System.out.println("decrementando Numeros dentro do While: " +numero);
             numero--;
         }

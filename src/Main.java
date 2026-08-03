@@ -1,13 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import ExercicioPOO.Models.EncapsulamentoCarro;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //instanciando a class carro
+        //Carro carro = new Carro("Wv", "Gol", 2026);
+        EncapsulamentoCarro encapsulamentoCarro = new EncapsulamentoCarro("","", 0, 0);
+
+        //Implementando a class Scanner para receber dados no teclado
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a Marca: ");
+        String marca = scanner.nextLine();
+        System.out.print("Digite a Modelo: ");
+        String modelo = scanner.nextLine();
+        System.out.print("Digite a ano: ");
+        int ano = scanner.nextInt();
+        System.out.print("Digite o valor : ");
+        double valor = scanner.nextDouble();
+
+
+        //carro.Imprimir();
+
+        // setando os novos valores recebidos pelo input no OBJ_Carro
+        encapsulamentoCarro.setMarca(marca);
+        encapsulamentoCarro.setModelo(modelo);
+        encapsulamentoCarro.setAno(ano);
+        encapsulamentoCarro.setValor(valor);
+
+
+
+        System.out.println("=====================");
+        //Printando Os Dados da class OBJ_Carro
+       encapsulamentoCarro.getAll();
     }
 }
+
